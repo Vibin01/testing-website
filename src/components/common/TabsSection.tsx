@@ -70,6 +70,7 @@ export default function TabsSection({ data }: TabsSectionData) {
           {data?.tabData?.map((items) => (
             <TabsTrigger
               key={items.id}
+              id="tab_click"
               value={items.id}
               data-title={items.title}    
       onClick={(e) => {
