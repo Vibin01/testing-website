@@ -79,7 +79,7 @@ export default function TabsSection({ data }: TabsSectionData) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "tab_click",
-          tab_title: title,      // 👈 SEND TITLE TO GA4
+          tab_title: title,      
         });
 
         console.log("Tab Clicked:", title);
