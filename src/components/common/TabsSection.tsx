@@ -71,7 +71,7 @@ export default function TabsSection({ data }: TabsSectionData) {
             <TabsTrigger
               key={items.id}
               value={items.id}
-              data-title={items.title}     // 👈 ADD THIS
+              data-title={items.title}    
       onClick={(e) => {
         const title = (e.currentTarget as HTMLElement).dataset.title;
 
