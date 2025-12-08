@@ -4,6 +4,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 interface TabsSectionData {
   data: {
     title: string;
@@ -65,6 +71,19 @@ export default function TabsSection({ data }: TabsSectionData) {
             <TabsTrigger
               key={items.id}
               value={items.id}
+              data-title={items.title}     // 👈 ADD THIS
+      onClick={(e) => {
+        const title = (e.currentTarget as HTMLElement).dataset.title;
+
+        // Send to GTM
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "tab_click",
+          tab_title: title,      // 👈 SEND TITLE TO GA4
+        });
+
+        console.log("Tab Clicked:", title);
+      }}
               className="hidden md:block pb-4 w-full h-[80px]  cursor-pointer font-bold  md:border-b-[10px] border-transparent  data-[state=active]:border-[#3A92FF] text-center"
             >
               <span className="text-[#0668E1] md:text-[13px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]">
