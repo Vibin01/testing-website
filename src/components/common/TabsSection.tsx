@@ -69,22 +69,10 @@ export default function TabsSection({ data }: TabsSectionData) {
         <TabsList className="md:grid grid-cols-4   flex items-center justify-center gap-2 w-full md:border-b-2 border-[#3A92FF] rounded-none h-auto">
           {data?.tabData?.map((items) => (
             <TabsTrigger
-              key={items.id}
-              id="tab_click"
+              key={items.id} 
               value={items.id}
-              data-title={items.title}    
-      onClick={(e) => {
-        const title = (e.currentTarget as HTMLElement).dataset.title;
+              id={items.title}
 
-        // Send to GTM
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "tab_click",
-          tab_title: title,      
-        });
-
-        console.log("Tab Clicked:", title);
-      }}
               className="hidden md:block pb-4 w-full h-[80px]  cursor-pointer font-bold  md:border-b-[10px] border-transparent  data-[state=active]:border-[#3A92FF] text-center"
             >
               <span className="text-[#0668E1] md:text-[13px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]">
