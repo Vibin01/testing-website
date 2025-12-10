@@ -270,7 +270,8 @@ export default function EmployerTabs({
                                 <TabsTrigger
                                   key={sub.path}
                                   value={sub.path}
-                                  className="justify-start w-full md:text-[13px] lg:text-[15px] xl:text-[17px] 2xl:text-[20px] font-semibold md:min-h-[30px] lg:min-h-[48px] xl:min-h-[54px] rounded-[12px] border border-[#0668E11A] data-[state=active]:bg-[#0668E1] data-[state=active]:text-white hover:bg-gray-100"
+                                  data-title={sub.title}
+                                  className="solution-sub-title justify-start w-full md:text-[13px] lg:text-[15px] xl:text-[17px] 2xl:text-[20px] font-semibold md:min-h-[30px] lg:min-h-[48px] xl:min-h-[54px] rounded-[12px] border border-[#0668E11A] data-[state=active]:bg-[#0668E1] data-[state=active]:text-white hover:bg-gray-100"
                                 >
                                   {sub.title}
                                 </TabsTrigger>
