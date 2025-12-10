@@ -30,7 +30,7 @@ const ChroniclesPage = () => {
                 </h3>
 
                 {/* Card content */}
-                <div className=" group flex p-3 xl:p-4  bg-[#FFFFFF] rounded-[12px] hover:shadow-[0px_4px_6px_-3px_#0000000D,_0px_10px_15px_-3px_#0000000D] shadow-[0px_4px_6px_-3px_#0000000D] h-full">
+                <div className="solution-card group flex p-3 xl:p-4  bg-[#FFFFFF] rounded-[12px] hover:shadow-[0px_4px_6px_-3px_#0000000D,_0px_10px_15px_-3px_#0000000D] shadow-[0px_4px_6px_-3px_#0000000D] h-full">
                   <div className="w-[26%] flex items-center mr-3">
                     <Image
                       src={item.icon}
