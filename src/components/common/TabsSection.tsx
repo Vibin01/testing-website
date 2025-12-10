@@ -72,7 +72,8 @@ export default function TabsSection({ data }: TabsSectionData) {
               key={items.id} 
               value={items.id}
               id={items.title}
-              className="hidden md:block pb-4 w-full h-[80px]  cursor-pointer font-bold  md:border-b-[10px] border-transparent  data-[state=active]:border-[#3A92FF] text-center"
+              data-title={items.title}
+              className="tab-section hidden md:block pb-4 w-full h-[80px]  cursor-pointer font-bold  md:border-b-[10px] border-transparent  data-[state=active]:border-[#3A92FF] text-center"
             >
               <span id={items.title} className="text-[#0668E1] md:text-[13px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]">
                 {items.title}
