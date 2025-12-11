@@ -88,7 +88,8 @@ export default function VideoSection() {
             {VideoData.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col w-full md:w-1/3 px-4 cursor-pointer"
+                data-role={item.role}
+                className="video-section group flex flex-col w-full md:w-1/3 px-4 cursor-pointer"
                 onClick={() => {
                   if (!item.videoUrl || item.videoUrl === "") {
                     setActiveVideo(""); 
