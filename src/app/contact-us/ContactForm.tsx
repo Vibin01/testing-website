@@ -69,6 +69,7 @@ console.log(res);
   };
   return (
     <form
+    onSubmit={handleSubmit}
        className=" mx-auto bg-white rounded-[16px] lg:rounded-[40px] shadow-[0px_0px_20px_0px_#0668E10D,_0px_0px_10px_0px_#0668E10D] p-5  flex flex-col md:flex-row gap-6">
       {/* Left Panel */}
       <div className="w-full lg:w-[40%] 2xl:w-1/3 bg-[#0668E1] text-white rounded-[10px] lg:rounded-[20px] py-6 px-3 lg:px-8">
@@ -164,7 +165,7 @@ console.log(res);
         <button
           type="submit"
           disabled={loading}
-          onClick={handleSubmit}
+          
           className="self-center mt-5 w-[200px] py-3 bg-[#0668E1] text-white font-medium rounded-[8px] hover:bg-blue-700 transition"
         >
           {loading ? "Sending..." : "Send your Message"}
