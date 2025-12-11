@@ -20,7 +20,7 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="w-full md:px-[4%] lg:px-[6%] xl:px-[8%] 2xl:px-[10%] mx-auto py-12"
+      className="faq-section group w-full md:px-[4%] lg:px-[6%] xl:px-[8%] 2xl:px-[10%] mx-auto py-12"
     >
       <h1 className="text-[22px] md:text-[26px] lg:text-[30px] xl:text-[38px] 2xl:text-[48px] font-bold text-center mb-12 md:mb-16 lg:mb-22">
         {FaqsData.title}

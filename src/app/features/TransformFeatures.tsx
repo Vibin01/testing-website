@@ -52,6 +52,7 @@ export default function TransformFeaturesSection() {
           return (
             <div
               key={feature.title}
+              data-title={feature.title}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               onClick={() =>
@@ -61,7 +62,7 @@ export default function TransformFeaturesSection() {
                     .replace(/[\s.]+/g, "-")}`
                 )
               }
-              className="cursor-pointer flex md:flex-col flex-row gap-4 p-3 md:p-4 xl:p-6 rounded-[12px] md:rounded-[16px] xl:rounded-[20px] bg-[#FFFFFF] md:bg-transparent md:bg-[linear-gradient(180deg,rgba(255,_255,_255,_0)_0%,rgba(255,_255,_255,_0)100%)] md:hover:bg-[linear-gradient(180deg,_rgba(255,255,255,0.6)_0%,_rgba(255,255,255,0.24)_100%)] shadow-[0px_4px_6px_0px_#0000000D] md:hover:shadow-[0px_4px_6px_0px_#0000000D,_0px_10px_15px_0px_#0000001A] md:shadow-none hover:shadow-[2px_2px_10px_6px_#0668E11A] transition ease-in-out duration-300"
+              className="features_sub_page group cursor-pointer flex md:flex-col flex-row gap-4 p-3 md:p-4 xl:p-6 rounded-[12px] md:rounded-[16px] xl:rounded-[20px] bg-[#FFFFFF] md:bg-transparent md:bg-[linear-gradient(180deg,rgba(255,_255,_255,_0)_0%,rgba(255,_255,_255,_0)100%)] md:hover:bg-[linear-gradient(180deg,_rgba(255,255,255,0.6)_0%,_rgba(255,255,255,0.24)_100%)] shadow-[0px_4px_6px_0px_#0000000D] md:hover:shadow-[0px_4px_6px_0px_#0000000D,_0px_10px_15px_0px_#0000001A] md:shadow-none hover:shadow-[2px_2px_10px_6px_#0668E11A] transition ease-in-out duration-300"
             >
               <div
                 ref={containerRef}
