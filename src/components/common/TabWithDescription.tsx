@@ -45,7 +45,8 @@ export const TabWithDescription = ({ data }: TabWithDescriptionProps) => {
             <div
               key={index}
               onClick={() => setActiveTab(tab.tab)}
-              className={`flex flex-col items-center justify-center gap-2 px-6 py-4  md:w-[180px] lg:w-[210px] xl:w-[240px] 2xl:w-[260px]  shadow-[0px_0px_4px_0px_#0668E14D]  md:h-[110px] xl:h-[120px] 2xl:h-[140px] ${
+              data-title={tab.tab}
+              className={` subpage-tab-section group flex flex-col items-center justify-center gap-2 px-6 py-4  md:w-[180px] lg:w-[210px] xl:w-[240px] 2xl:w-[260px]  shadow-[0px_0px_4px_0px_#0668E14D]  md:h-[110px] xl:h-[120px] 2xl:h-[140px] ${
                 activeTab === tab.tab
                   ? "bg-[#0668E1] text-white font-bold"
                   : "text-black font-semibold"
