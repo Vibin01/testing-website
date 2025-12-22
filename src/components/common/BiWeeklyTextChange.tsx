@@ -1,11 +1,14 @@
-import { getBiWeeklyData } from "@/lib/biWeekly";
+// app/components/SeoText.tsx
+import data from "@/data/data.json";
 
-export const BiWeeklyTextChange = async () => {
-  const { description, updatedAt } = getBiWeeklyData();
+// 🚨 IMPORTANT: Disable caching
+export const dynamic = "force-dynamic";
+
+export default function BiWeeklyTextChange() {
+  const index =
+    Math.floor(Date.now() / 60000) % data.descriptions.length;
 
   return (
-    <>
-      {description} — {new Date(updatedAt).toDateString()}
-    </>
+    <p>{data.descriptions[index]}</p>
   );
-};
+}

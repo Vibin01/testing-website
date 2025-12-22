@@ -1,7 +1,7 @@
 import data from "@/data/data.json";
 
-export function getBiWeeklyData() {
-  const INTERVAL_MS = 60 * 1000;
+export function getRotatingText() {
+  const INTERVAL_MS = 60 * 1000; // 60 seconds
   const index =
     Math.floor(Date.now() / INTERVAL_MS) % data.descriptions.length;
 

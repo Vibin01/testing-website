@@ -1,4 +1,4 @@
-import { BiWeeklyTextChange } from "./common/BiWeeklyTextChange";
+import BiWeeklyTextChange from "./common/BiWeeklyTextChange";
 import FooterClient from "./FooterClient";
 
 export default async function Footer() {
