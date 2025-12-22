@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Exo_2 } from "next/font/google";
 import { Header } from "@/components/Header";
-import Footer from "@/components/Footer";
 import Script from "next/script";
+import Footer from "@/components/Footer";
+
+export const dynamic = "force-dynamic";
 
 const exo2 = Exo_2({
   subsets: ["latin"],
