@@ -1,6 +1,5 @@
-import { NextResponse } from "next/server";
-import { getBiWeeklyData } from "@/lib/biWeekly";
+// import { NextResponse } from "next/server";
 
-export async function GET() {
-  return NextResponse.json(getBiWeeklyData());
-}
+// export async function GET() {
+//   return NextResponse.json(getBiWeeklyData());
+// }
